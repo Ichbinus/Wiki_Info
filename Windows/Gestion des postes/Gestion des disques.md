@@ -86,6 +86,7 @@ delete volume
 ```cmd
 # après avoir sélectionné un disque
 clean
+```
 
 # **Gestion des disques avec PowerShell**
 
