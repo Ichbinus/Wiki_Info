@@ -1,8 +1,7 @@
 # **Sous cmd avec outils de gestion DISKPART**
-
+## **Pour accéder à le gestion des disques via diskpart:**
 ```cmd
 diskpart
-# permet d'accéder à l'outil de gestion de disque sous cmd
 ```
 
 ## Lister les disques / partitions / volumes
