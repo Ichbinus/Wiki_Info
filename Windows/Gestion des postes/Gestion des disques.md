@@ -112,7 +112,7 @@ delete volume
 clean
 ```
 ---
-# **Gestion des disques avec PowerShell <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" height="100px" />**
+# **Gestion des disques avec PowerShell <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" height="50px" />**
 <div align="center">
   <p align="center">
     <a href="#">
