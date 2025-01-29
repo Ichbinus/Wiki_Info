@@ -17,7 +17,7 @@ icacls <chemin du fishier/dossier>
 ```
 - exemple:
 ```cmd
-	icacls F:\Téléchargement
+icacls F:\Téléchargement
 ```
 ---
 ## ajouter des droits à un dossier / fichier
