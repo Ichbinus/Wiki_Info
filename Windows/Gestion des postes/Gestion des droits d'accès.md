@@ -10,7 +10,7 @@
   <h1 align="center">Gestion des droits d'accès sous Windows</h1>
 </div>
 
-# **Gestion des disques via cmd <img src=https://cdn.iconscout.com/icon/premium/png-256-thumb/command-prompt-3477885-2910207.png height="50px" />**
+# **Gestion des droits via cmd <img src=https://cdn.iconscout.com/icon/premium/png-256-thumb/command-prompt-3477885-2910207.png height="50px" />**
 ## afficher des droits d’un dossier / fichier
 ```cmd
 icacls <chemin du fishier/dossier>
@@ -56,7 +56,7 @@ icacls F:\Téléchargement /deny Frederic:(D,RX)
 >           D - delete access
 ---
 
-# **Gestion des Powershell via cmd <img src=https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png height="50px" />**
+# **Gestion des droits via Powershell <img src=https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png height="50px" />**
 
 ## afficher des droits d’un dossier / fichier 
 ```powershell
