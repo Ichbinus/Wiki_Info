@@ -47,12 +47,19 @@ icacls <chemin du fishier/dossier> /deny <nom du compte>: (interdiction à ajout
 icacls F:\Téléchargement /deny Frederic:(D,RX)
 ```
 >liste des droits
+
 >        	N - no access
+
 >           F - full access
+
 >           M - modify access
+
 >           RX - read and execute access
+
 >           R - read-only access
+
 >           W - write-only access
+
 >           D - delete access
 ---
 
@@ -81,23 +88,19 @@ Get-Acl -Path "C:\Dog.txt" | Set-Acl -Path "C:\Cat.txt"
 ```powershell
 Install-Module NTFSSecurity
 ```
-## Ajouter des droits
+### Ajouter des droits
 ```powershell
 Add-NTFSAccess -Path "dossier_cible" -AccessRight "type_de_droits" -Account "groupe_de_domaine_local_souhaité"
 ```
-        
-## lister les droits
+      
+### lister les droits
 ```powershell
 Get-NTFSAccess "dossier_cible" |format-Table -Wrap
 ```
-        
-## Gérer les partages
-### Ajouter des droits
-```powershell
-New-SMBShare -Name "Nom_du_Partage" -Path "dossier_cible" -"type_de_droits" "list_users"
-```
-        
-### lister les droits
-```powershell
-Get-SMBShare -Name "Nom_du_Partage" 
-```
+>liste des droits utilisables:
+>| AppendData | GenericAll | Read | Synchronize |
+>| ChangePermissions | GenericExecute | ReadAndExecute | TakeOwnership |
+>| CreateFiles | GenericRead | ReadAttributes | Traverse |
+>| Delete | GenericWrite | ReadData | Write |                                                                 
+>| DeleteSubdirectoriesAndFiles | Modify | ReadExtendedAttributes | WriteAttributes | 
+>| FullControl | None | ReadPermissions | WriteExtendedAttributes |

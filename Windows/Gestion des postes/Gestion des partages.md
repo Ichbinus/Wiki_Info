@@ -78,6 +78,7 @@ Revoke-SmbShareAccess -Name "chemin vers le dossier de partage" -AccountName "co
 ```powershell
 Revoke-SmbShareAccess -Name "Partage" -AccountName "florian@it-connect.local" -Force
 ```
+---
 ### Refuser des droits d'accès sur le partage
 ```powershell
 Bloke-SmbShareAccess -Name "chemin vers le dossier de partage" -AccountName "compte dont on veut vérifier les droits" -Force
@@ -88,5 +89,4 @@ Bloke-SmbShareAccess -Name "Partage" -AccountName "florian@it-connect.local" -Fo
 ```
 > 💡 Le paramètre -Force permet de zapper la confirmation.
 
-> 💡 on peut débloquer en changeant Bloke par Unbloke
----     
+> 💡 on peut débloquer en changeant Bloke par Unbloke    
