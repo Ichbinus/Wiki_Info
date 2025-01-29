@@ -26,7 +26,7 @@ icacls <chemin du fishier/dossier> /grant <nom du compte>: (droits à ajouter)
 ```
 - exemple:
 ```cmd
-	icacls F:\Téléchargement /grant Administrator:(D,RX)
+icacls F:\Téléchargement /grant Administrator:(D,RX)
 ```
 >liste des droits:
 >			N - no access
@@ -44,7 +44,7 @@ icacls <chemin du fishier/dossier> /deny <nom du compte>: (interdiction à ajout
 ```
 - exemple:
 ```cmd
-	icacls F:\Téléchargement /deny Frederic:(D,RX)
+icacls F:\Téléchargement /deny Frederic:(D,RX)
 ```
 >liste des droits
 >        	N - no access
@@ -73,7 +73,7 @@ Get-acl -Path <chemin du fichier/dossier source> |Set-Acl -Path <chemin du fichi
 ```
 - exemple: 
 ```powershell
-    Get-Acl -Path "C:\Dog.txt" | Set-Acl -Path "C:\Cat.txt"
+Get-Acl -Path "C:\Dog.txt" | Set-Acl -Path "C:\Cat.txt"
 ```
     
 ## Gérer les droit (ACL)
