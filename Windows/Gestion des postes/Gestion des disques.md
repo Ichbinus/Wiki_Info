@@ -10,8 +10,8 @@
   <h1 align="center">Gestion des disques sous Windows</h1>
 </div>
 
-# **Gestion des disques via DISKPART**
-## **Accès à diskpart <img src=https://i0.wp.com/www.techspace.fr/wp-content/uploads/2014/12/diskpart.png height="50px" />**
+# **Gestion des disques via DISKPART <img src=https://i0.wp.com/www.techspace.fr/wp-content/uploads/2014/12/diskpart.png height="50px" />**
+## **Accès à diskpart **
 
 - Diskpart est accessible via powershell ou cmd en tappant la commande suivante:
 ```cmd
