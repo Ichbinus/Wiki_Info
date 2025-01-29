@@ -7,7 +7,7 @@
 </div>
 
 <div style="border: 2px solid #d1d5db; padding: 20px; border-radius: 8px; background-color: #f9fafb;">
-  <h1 align="center">Gestion des froits d'accès sous Windows</h1>
+  <h1 align="center">Gestion des droits d'accès sous Windows</h1>
 </div>
 
 # **Gestion des disques via cmd <img src=https://cdn.iconscout.com/icon/premium/png-256-thumb/command-prompt-3477885-2910207.png height="50px" />**
