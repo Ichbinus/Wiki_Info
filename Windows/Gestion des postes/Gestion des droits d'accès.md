@@ -93,6 +93,7 @@ Add-NTFSAccess -Path "dossier_cible" -AccessRight "type_de_droits" -Account "gro
 Get-NTFSAccess "dossier_cible" |format-Table -Wrap
 ```
 ### liste des droits utilisables:
+|------------------------------|----------------|------------------------|-------------------------|
 | AppendData                   | GenericAll     | Read                   | Synchronize             |
 | ChangePermissions            | GenericExecute | ReadAndExecute         | TakeOwnership           |
 | CreateFiles                  | GenericRead    | ReadAttributes         | Traverse                |
