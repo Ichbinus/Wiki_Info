@@ -1,1 +1,1 @@
-![Texte alternatif](https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png)
+<img src="https://exemple.com/image.jpg" alt="Texte alternatif" width="300" height="200">
