@@ -1,1 +1,1 @@
-![Texte alternatif](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/main/Windows/Gestion%20des%20postes/image.png)
+![Texte alternatif](https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png)
