@@ -1,34 +1,48 @@
-# **Sous cmd avec outils de gestion DISKPART**
-## **Pour accéder à le gestion des disques via diskpart:**
+# **Gestion des disques via DISKPART**
+## **Accès à diskpart:**
+- Diskpart est accessible via powershell ou cmd en tappant la commande suivante:
 ```cmd
 diskpart
 ```
-
-## Lister les disques / partitions / volumes
-
+## **Lister les disques / partitions / volumes**
 ```cmd
-list disk |ou| partition |ou| volume
+list disk
 ```
-
+```cmd
+list partition
+```
+```cmd
+list volume
+```
 ## Sélectionner un disque / partition / volume
-
 ```cmd
-select disk X |ou| partition X |ou| volume X
-# X : numéro de la partition/disque/volume affiché dans la liste
+select disk X 
 ```
+```cmd
+select partition X 
+```
+```cmd
+select volume X 
+```
+> 💡X : numéro de la partition/disque/volume affiché dans la liste
+
+---
 
 ## Création d'une partition
-
+- après avoir sélectionné un disque
 ```cmd
-# après avoir sélectionné un disque
 create partition <type de partition> size=<taille partition en Mb>
-# exemple :
-create partition primary size=15360 # donne une partition primaire de 15 Go
 ```
-
+- exemple :
+```cmd
+create partition primary size=15360
+```
+> 💡Donne une partition primaire de 15 Go
 > 💡 **Attention** :  
 > Si on est sur un disque MBR, on ne peut avoir que 4 partitions réelles maximum.  
 > Pour ne pas gâcher la place restante, il faut créer en premier une partition étendue, puis une partition logique.
+
+---
 
 ## Formatage
 
