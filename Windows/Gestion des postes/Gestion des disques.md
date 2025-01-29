@@ -1,4 +1,10 @@
-https://cdn-icons-png.flaticon.com/512/3962/3962060.png
+<div align="center">
+  <p align="center">
+    <a href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/3962/3962060.png" height="100px" />
+    </a>
+  </p>
+</div>
 # **Gestion des disques via DISKPART**
 ## **Accès à diskpart:**
 - Diskpart est accessible via powershell ou cmd en tappant la commande suivante:
@@ -113,13 +119,6 @@ clean
 ```
 ---
 # **Gestion des disques avec PowerShell <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" height="50px" />**
-<div align="center">
-  <p align="center">
-    <a href="#">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" height="100px" />
-    </a>
-  </p>
-</div>
 ---
 
 ## Obtenir des informations
