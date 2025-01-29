@@ -112,7 +112,7 @@ clean
 ```
 ---
 # **Gestion des disques avec PowerShell**
-![Texte alternatif](https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png)
+<center>![Texte alternatif](https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png)</center>
 ---
 
 ## Obtenir des informations
