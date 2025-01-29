@@ -11,7 +11,8 @@
 </div>
 
 # **Gestion des disques via DISKPART**
-## **Accès à diskpart:**
+## **Accès à diskpart <img src=https://i0.wp.com/www.techspace.fr/wp-content/uploads/2014/12/diskpart.png height="50px" />**
+
 - Diskpart est accessible via powershell ou cmd en tappant la commande suivante:
 ```cmd
 diskpart
