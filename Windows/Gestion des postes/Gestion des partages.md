@@ -59,7 +59,7 @@ Get-SmbShare
 ```
 ---
 ## Gérer les droits NTFS sur le partage
-### ajouter des droits sur le partage
+### ajouter des droits d'accès sur le partage
 ```powershell
 Grant-SmbShareAccess -Name "chemin vers le dossier de partage" -AccountName "compte dont on veut vérifier les droits" -AccessRight "type de droit" -Force
 ```
@@ -67,15 +67,6 @@ Grant-SmbShareAccess -Name "chemin vers le dossier de partage" -AccountName "com
 - exemple: 
 ```powershell
 Grant-SmbShareAccess -Name "Partage" -AccountName "Ichbine" -AccessRight Full -Force
-``` 
----
-### ajouter des droits d'accès sur le partage
-```powershell
-Grant-SmbShareAccess -Name "chemin vers le dossier de partage" -AccountName "compte dont on veut vérifier les droits" -AccessRight "type de droit" -Force
-```
-- exemple: 
-```powershell
-Grant-SmbShareAccess -Name "Partage" -AccountName "florian@it-connect.local" -AccessRight Read -Force
 ``` 
 ---
 ### supprimer des droits d'accès sur le partage
