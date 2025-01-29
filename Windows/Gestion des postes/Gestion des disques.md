@@ -6,6 +6,10 @@
   </p>
 </div>
 
+<div style="border: 2px solid #d1d5db; padding: 20px; border-radius: 8px; background-color: #f9fafb;">
+  <h2 align="center">Gestion des disques sous Windows</h2>
+</div>
+
 # **Gestion des disques via DISKPART**
 ## **Accès à diskpart:**
 - Diskpart est accessible via powershell ou cmd en tappant la commande suivante:
