@@ -127,7 +127,7 @@ clean
 # **Gestion des disques avec PowerShell <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" height="50px" />**
 ---
 
-## <summary>Obtenir des informations</summary>
+<summary>## Obtenir des informations</summary>
 ```powershell
 Get-Disk
 ```
