@@ -1,0 +1,1 @@
+![alt text](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/main/Windows/Gestion%20des%20postes/image.png)
