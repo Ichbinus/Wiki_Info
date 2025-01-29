@@ -111,8 +111,10 @@ delete volume
 clean
 ```
 ---
-
 # **Gestion des disques avec PowerShell**
+![Texte alternatif](https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png)
+---
+
 ## Obtenir des informations
 ```powershell
 Get-Disk
