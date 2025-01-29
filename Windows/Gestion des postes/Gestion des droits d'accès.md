@@ -46,21 +46,16 @@ icacls <chemin du fishier/dossier> /deny <nom du compte>: (interdiction à ajout
 ```cmd
 icacls F:\Téléchargement /deny Frederic:(D,RX)
 ```
->liste des droits
-
->        	N - no access
-
->           F - full access
-
->           M - modify access
-
->           RX - read and execute access
-
->           R - read-only access
-
->           W - write-only access
-
->           D - delete access
+### liste des droits utilisables:
+| Code | Droits d'accès correspondant |
+| --------- | --------- |
+| N | no access |
+| F | full access |                                                               
+| M | modify access |
+| RX | read and execute access |
+| R | read-only access |
+| W | write-only access |
+| D | delete access |
 ---
 
 # **Gestion des droits via Powershell <img src=https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png height="50px" />**
@@ -97,10 +92,10 @@ Add-NTFSAccess -Path "dossier_cible" -AccessRight "type_de_droits" -Account "gro
 ```powershell
 Get-NTFSAccess "dossier_cible" |format-Table -Wrap
 ```
->liste des droits utilisables:
->| AppendData | GenericAll | Read | Synchronize |
->| ChangePermissions | GenericExecute | ReadAndExecute | TakeOwnership |
->| CreateFiles | GenericRead | ReadAttributes | Traverse |
->| Delete | GenericWrite | ReadData | Write |                                                                 
->| DeleteSubdirectoriesAndFiles | Modify | ReadExtendedAttributes | WriteAttributes | 
->| FullControl | None | ReadPermissions | WriteExtendedAttributes |
+### liste des droits utilisables:
+| AppendData | GenericAll | Read | Synchronize |
+| ChangePermissions | GenericExecute | ReadAndExecute | TakeOwnership |
+| CreateFiles | GenericRead | ReadAttributes | Traverse |
+| Delete | GenericWrite | ReadData | Write |                                                                 
+| DeleteSubdirectoriesAndFiles | Modify | ReadExtendedAttributes | WriteAttributes | 
+| FullControl | None | ReadPermissions | WriteExtendedAttributes |
