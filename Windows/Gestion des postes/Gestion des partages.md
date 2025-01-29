@@ -1,4 +1,4 @@
 <details>
-  <summary>Cliquer pour dérouler</summary>
+  <summary>## Obtenir des informations</summary>
   Voici le contenu du menu déroulant.
 </details>
