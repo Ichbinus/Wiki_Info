@@ -21,7 +21,7 @@ icacls <chemin du fishier/dossier>
 ```
 ---
 ## ajouter des droits à un dossier / fichier
-
+```cmd
 icacls <chemin du fishier/dossier> /grant <nom du compte>: (droits à ajouter)
 ```
 - exemple:
