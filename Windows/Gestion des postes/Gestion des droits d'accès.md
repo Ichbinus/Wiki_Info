@@ -93,10 +93,30 @@ Add-NTFSAccess -Path "dossier_cible" -AccessRight "type_de_droits" -Account "gro
 Get-NTFSAccess "dossier_cible" |format-Table -Wrap
 ```
 ### liste des droits utilisables:
-|------------------------------|----------------|------------------------|-------------------------|
-| AppendData                   | GenericAll     | Read                   | Synchronize             |
-| ChangePermissions            | GenericExecute | ReadAndExecute         | TakeOwnership           |
-| CreateFiles                  | GenericRead    | ReadAttributes         | Traverse                |
-| Delete                       | GenericWrite   | ReadData               | Write                   |                                                                 
-| DeleteSubdirectoriesAndFiles | Modify         | ReadExtendedAttributes | WriteAttributes         | 
-| FullControl                  | None           | ReadPermissions        | WriteExtendedAttributes |
+| Paramètre                         | Effet |
+|------------------------------------|---------------------------------------------------------------|
+| AppendData                        | Autorise l'ajout de données à un fichier existant.            |
+| ChangePermissions                 | Permet de modifier les permissions d'un fichier/dossier.     |
+| CreateFiles                       | Autorise la création de nouveaux fichiers.                   |
+| Delete                            | Permet la suppression du fichier/dossier.                    |
+| DeleteSubdirectoriesAndFiles      | Autorise la suppression des sous-dossiers et fichiers.       |
+| FullControl                       | Donne un contrôle total sur le fichier/dossier.              |
+| GenericAll                        | Regroupe toutes les autorisations.                           |
+| GenericExecute                    | Permet l'exécution d'un fichier ou la traversée d'un dossier.|
+| GenericRead                       | Permet de lire un fichier et ses attributs.                  |
+| GenericWrite                      | Autorise l'écriture et la modification d'un fichier.         |
+| Modify                            | Inclut Read, Write, Execute et Delete.                       |
+| None                              | Aucun accès.                                                 |
+| Read                              | Permet uniquement la lecture des données.                    |
+| ReadAndExecute                    | Combine Read et Execute.                                      |
+| ReadAttributes                    | Autorise la lecture des attributs du fichier/dossier.        |
+| ReadData                          | Permet la lecture du contenu du fichier.                     |
+| ReadExtendedAttributes            | Permet la lecture des attributs étendus.                     |
+| ReadPermissions                   | Autorise la lecture des permissions d'un fichier/dossier.    |
+| Synchronize                       | Utilisé pour la synchronisation des accès avec d'autres processus. |
+| TakeOwnership                     | Permet de prendre possession d'un fichier/dossier.           |
+| Traverse                          | Autorise la traversée d'un dossier sans en voir le contenu.  |
+| Write                             | Permet d'écrire et de modifier un fichier.                   |
+| WriteAttributes                   | Autorise la modification des attributs du fichier/dossier.   |
+| WriteExtendedAttributes           | Permet de modifier les attributs étendus.                    |
+
