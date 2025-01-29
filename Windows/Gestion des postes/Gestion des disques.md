@@ -113,55 +113,75 @@ clean
 ---
 
 # **Gestion des disques avec PowerShell**
-
 ## Obtenir des informations
-
 ```powershell
-Get-Disk / Get-Partition / Get-Volume
+Get-Disk
 ```
+```powershell
+Get-Partition
+```
+```powershell
+Get-Volume
+```
+---
 
-## Partitionner
-
+## Création d'une partition
 ```powershell
 New-Partition -<disque où faire la partition> -<taille partition> -<lettre de la partition>
+```
+- exemple: 
+```powershell
 New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter T
 ```
+---
 
-> 💡 **On peut mixer les commandes avec PowerShell**
-
-```powershell
-Get-Disk | Where-Object PartitionStyle -Eq "RAW" | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
-# Obtient tous les disques, filtre ceux en RAW (non partitionnés), les initialise, les partitionne, et les formate
-```
-
-## Formater
+## Formater une partition
 
 ```powershell
 Format-Volume -DriveLetter <lettre partition souhaitée> -FileSystem <système de fichier> -NewFileSystemLabel <nom du volume>
-# Exemple :
+```
+- Exemple :
+```powershell
 Format-Volume -DriveLetter D -FileSystem NTFS -NewFileSystemLabel DATA
 ```
 
-## Changer l’identification d’un volume
+---
 
+## Partitionner & Formater un disk
+> 💡 **On peut mixer les commandes avec PowerShell**
+```powershell
+Get-Disk | Where-Object PartitionStyle -Eq "RAW" | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
+```
+> Obtient tous les disques, filtre ceux qui sont en RAW (non partitionnés), les initialise, les partitionne et les formate.
+
+---
+
+## Changer l’identification d’un volume
 ```powershell
 Set-Volume -DriveLetter <lettre souhaitée> -NewFileSystemLabel <étiquette du volume>
-# Exemple :
+```
+- Exemple :
+```powershell
 Set-Volume -DriveLetter D -NewFileSystemLabel DATA
 ```
+---
 
 ## Supprimer une partition
-
 ```powershell
 Remove-Partition -<n° du disque> -<n° de la partition>
-# Exemple :
+```
+-  Exemple :
+```powershell
 Remove-Partition -DiskNumber 5 -PartitionNumber 2
 ```
+---
 
 ## Nettoyer un disque
-
 ```powershell
 Clear-Disk -<n° du disque>
-# Exemple :
+```
+- Exemple :
+```powershell
 Clear-Disk -Number 2
+```
 
