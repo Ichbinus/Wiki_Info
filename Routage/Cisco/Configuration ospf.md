@@ -142,12 +142,59 @@ end
     passive-interface GigabitEthernet 0/0/0
     passive-interface loopback 0
     end
-```
+    ```
 # Configuration du type de réseau
+- types de réseau admis:
+    <details>
+    <summary>point-to-point</summary>
+
+    - **avantages**:
+        - Configuration simple
+        - Pas d'élection de routeur désigné (DR) et de routeur de secours (BDR), ce qui réduit la complexité
+        - Convergence rapide
+    - **inconvénients**:
+        - Nécessite une interface dédiée pour chaque liaison, ce qui peut consommer plus de ports
+    </details>
+    <details>
+    <summary>broadcast</summary>
+    
+    - **avantages**:
+        - Nécessite une interface dédiée pour chaque liaison, ce qui peut consommer plus de ports
+        - Économie d'adresses IP grâce à l'utilisation d'un segment partagé
+    - **inconvénients**:  
+        - Élection d'un DR et d'un BDR, ce qui peut ralentir la convergence en cas de changement
+        - Sensible aux tempêtes de broadcast si mal configuré 
+    </details>
+     
 ```ios
 conf t
-router ospf "id proccessus"
-passive-interface "ID interface n°1"
-passive-interface "ID interface n°2"
+interface GigabitEthernet X/X/X
+ip ospf network "type de réseau"
 end
 ```
+- exemple
+    ```ios
+    conf t
+    interface GigabitEthernet X/X/X
+    ip ospf network point-to-point
+    end
+    ```
+# Configuration de la priorité OSPF
+```ios
+conf t
+interface GigabitEthernet X/X/X
+ip ospf priority XXX
+clear ip ospf process
+end
+```
+- exemple
+    ```ios
+    conf t
+    interface GigabitEthernet 0/0/0
+    ip ospf priority 255
+    clear ip ospf process
+    end
+    ``` 
+>Un priorité de 255 correspond à forcer un DR (priorité la + haute)
+La bonne pratique pour le BDR consiste à mettre une priorité de 254.
+Saisir une priorité de 0 empéchera le router de devenir DR ou BDR même en cas de pannes des autres routeurs.
