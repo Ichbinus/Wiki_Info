@@ -8,6 +8,7 @@
 <div style="border: 2px solid #d1d5db; padding: 20px; border-radius: 8px; background-color: #f9fafb;">
   <h1 align="center">Configuration réseau OSPF chez CISCO</h1>
 </div>
+
 ---
 
 # Vérification fonctionnement OSPF
