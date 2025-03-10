@@ -10,6 +10,26 @@
 </div>
 ---
 
+# Vérification fonctionnement OSPF
+```ios
+show ip interface brief
+```
+```ios
+show ip route 
+```
+```ios
+show ip ospf neighbor
+```
+```ios
+show ip protocols
+```
+```ios
+show ip ospf
+```
+```ios
+show ip ospf interface
+```
+---
 #  Activation d'OSPF sur le Routeur
 ```ios
 conf t
@@ -82,7 +102,7 @@ router ospf "id proccessus"
 network "réseau n°1 à router" "wildmask du réseau n°1 à router" area "zone réseau"
 network "réseau n°2 à router" "wildmask du réseau n°2 à router" area "zone réseau"
 ```
->- La **zone réseau** correspond à un ensemble de routeur.
+>La **zone réseau** correspond à un ensemble de routeur.
 - exemple
     ```ios
     conf t
@@ -122,6 +142,7 @@ ip ospf "id proccessus" area "zone réseau"
     interface Loopback 1
     ip ospf 10 area 5
     ```
+---
 # Configurer des interfaces passives
 - But:
     - cela va désactiver l'envoie de message "hello" sur les interfaces désactivées. 
@@ -143,6 +164,7 @@ end
     passive-interface loopback 0
     end
     ```
+---
 # Configuration du type de réseau
 - types de réseau admis:
     <details>
@@ -179,6 +201,7 @@ end
     ip ospf network point-to-point
     end
     ```
+---
 # Configuration de la priorité OSPF
 ```ios
 conf t
@@ -195,6 +218,101 @@ end
     clear ip ospf process
     end
     ``` 
->Un priorité de 255 correspond à forcer un DR (priorité la + haute)
-La bonne pratique pour le BDR consiste à mettre une priorité de 254.
-Saisir une priorité de 0 empéchera le router de devenir DR ou BDR même en cas de pannes des autres routeurs.
+>- Un priorité de 255 correspond à forcer un DR (priorité la + haute)
+>- La bonne pratique pour le BDR consiste à mettre une priorité de 254.
+>- Saisir une priorité de 0 empéchera le router de devenir DR ou BDR même en cas de pannes des autres routeurs.
+---
+# Configuration des coûts de liaisons
+```ios
+interface "ID interface n°1"
+ip ospf cost xx
+interface "ID interface n°2"
+ip ospf cost XX
+end
+```
+- exemple
+    ```ios
+    interface GigabitEthernet 0/0/0
+    ip ospf cost 30
+    interface loopback 0
+    ip ospf cost 10
+    end
+    ```
+---
+# Ajuster la largeur de bande passante de référence
+```ios
+router ospf "ID processus"
+auto-cost reference-bandwidth "rapport de bande passante"
+```
+>Commande à propagé sur toutes ls interfaces des routeurs du réseau.
+- Suivant le type de connectiques le plus rapide présent sur le réseau:
+    <details>
+    <summary>10 Gigabits Ethernet 10 Gbps</summary>
+
+    ```ios
+    router ospf "ID processus"
+    auto-cost reference-bandwidth 10000
+    ```
+    </details>
+    <details>
+    <summary>1 Gigabits Ethernet 1 Gbps</summary>
+
+    ```ios
+    router ospf "ID processus"
+    auto-cost reference-bandwidth 1000
+    ```
+    </details>
+    <details>
+    <summary>Fast Ethernet 100 Mbps</summary>
+
+    ```ios
+    router ospf "ID processus"
+    auto-cost reference-bandwidth 100
+    ```
+    </details>   
+    <details>
+    <summary>Ethernet 10 Mbps</summary>
+
+    ```ios
+    router ospf "ID processus"
+    auto-cost reference-bandwidth 10
+    ```
+    </details> 
+--- 
+# Modifier les intervalles OSPFv2
+## Personnalisation des intervalles
+```ios
+interface "ID interface n°1"
+ip ospf hello-interval "intervalle en seconde"
+ip ospf dead-interval "intervalle en seconde"
+```
+>**hello-interval:** intervalle entre l'envoie de massage Hello. Par défaut: 10 secondes
+>**dead-interval:** période pendant laquelle le routeur attend de recevoir un paquet Hello avant de déclarer le voisin en panne. Par défaut: 40 secondes
+## Réinitialisation des intervalles
+```ios
+interface "ID interface n°1"
+no ip ospf hello-interval
+no ip ospf dead-interval
+```
+---
+# Propager une route statique via OSPFv2
+## 1. définition de la route statique
+```ios
+ip route "réseau à router" "netmasque du réseau" "interface où doit être routé lle trafic"
+```
+- exemple
+```ios
+ip route 0.0.0.0 0.0.0.0 Serial0/1/0
+```
+## 2. propagation de la route
+```ios
+router ospf "ID processus"
+default-information originate
+end
+```
+- exemple
+    ```ios
+    router ospf 10
+    default-information originate
+    end
+    ```
