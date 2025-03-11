@@ -83,11 +83,11 @@
 
 - Ouvrir la console de gestion
     
-    ![Untitled](Untitled.png)
+    ![Config_initiale_WDS_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_WDS_1.png) 
     
     - faire un clic droit sur le serveur puis sur Configure Server
         
-        ![Untitled](Untitled%201.png)
+        ![Config_initiale_WDS_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_WDS_2.png) 
         
 - Renseigner
     - Le contexte de mise en oeuvre du service en ou hors contexte de domaine
@@ -96,12 +96,12 @@
 - DHCP:
     - Si le serveur faisant WDS fait également DHCP, cocher les 2 cases de l’assistant, dans le cas contraire, les laisser vides.
         
-        ![Untitled](Untitled%202.png)
+        ![Config_initiale_WDS_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_WDS_3.png) 
         
 - Boot
     - Si l’on souhaite que les clients DHCP accrochent le PXE sans action particulière, le paramétrage suivant est à réaliser
         
-        ![Untitled](Untitled%203.png)
+        ![Config_initiale_WDS_4](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_WDS_4.png) 
         
 ---
 ## Ajout d’image de démarrage
@@ -111,7 +111,7 @@
         - Indiquer le chemin du fichier WIM souhaité
             - Cela peut être le fichier boot.wim du répertoire Sources du média d’installation de Windows (exemple: explorer un cd d’install)
             
-            ![Untitled](Untitled%204.png)
+            ![image_boot_WDS_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_boot_WDS_1.png)
 
 ---
 ## Ajout d’image d’installation
@@ -146,12 +146,12 @@
 - Depuis une image de boot:
     - faire un clic droit et choisir Créer une image de capture
         
-        ![Untitled](Untitled%205.png)
+        ![image_boot_WDS_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_capture_MDT_1.png)
         
         - L’assistant de création d’image de capture se lance
         - Renseigner un nom et un chemin de stockage de l’image à capturer
         
-        ![Untitled](Untitled%206.png)
+        ![image_boot_WDS_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_capture_MDT_2.png)
         
 - Cliquer sur Ajouter une image d’installation
     - Une image d’installation doit être associée à un groupe d’images
@@ -166,17 +166,17 @@
 
 - booter la machine à capturer en PXE depuis l’image de capture
     
-    ![Untitled](Untitled%207.png)
+    ![image_sysprep_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_sysprep_1.png)
     
 - Après avoir ciblé le volume sur lequel se trouve le système d’exploitation à capturer, associer un nom à cette image
     
-    ![Untitled](Untitled%208.png)
+    ![image_sysprep_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_sysprep_2.png)
     
 - Renseigner ensuite
     - Le chemin du répertoire local dans lequel sera stocké l’image de capture durant sa création
     - Le groupe d’image dans lequel sera stocké la capture dans WDS
         
-        ![Untitled](Untitled%209.png)
+        ![image_sysprep_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_sysprep_3.png)
 ---
 # MDT
 ## Installation MDT
@@ -193,16 +193,16 @@
     - Sélectionner les composants souhaités pour ADK
         - Au minimum installer les fonctionnalités cochées ci-dessous
         
-        ![Untitled](Untitled%2010.png)
+        ![Install_MDT_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Install_MDT_1.png)
         
-        ![Untitled](Untitled%2011.png)
+        ![Install_MDT_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Install_MDT_2.png)
 ---
 ## Configuration initiale MDT
 - Ouvrir la console de gestion Deployment Workbench
-    ![Untitled](Untitled%2012.png)
+    ![Config_initiale_MDT_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_MDT_1.png)
     
     - faire un clic droit sur Deployment Share puis New Deployment Share
-        ![Untitled](Untitled%2013.png)
+        ![config_initial_MDT_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/config_initial_MDT_2.png)
         
 - Renseigner
     - Le chemin du dossier de déploiement
@@ -216,7 +216,7 @@
 ---
 ## Paramètrage du Partage de déploiement
 >⚠️ Une mise à jour du partage déploiement est nécessaire après toute modification
->![Untitled](Untitled%2014.png)
+>![partage_deploiement_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/partage_deploiement_1.png)
 - Les paramétrages sont disponibles dans les propriétés du partage de déploiement
     - Onglet General
         - Paramètres généraux et activation du multicast (via WDS)
@@ -242,11 +242,11 @@
         - Indiquer le chemin d’un fichier WIM ciblé
         - Aller chercher dans les images intégrées au service WDS ⇒ si un WDS existe c’est ça qu’il faut choisir.
             
-            ![Untitled](Untitled%2015.png)
+            ![image_install_WDS_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/image_install_WDS_1.png)
 ---
 ## Automatisation de déploiement
 >⚠️ Bootstrap.ini et Customsettings.ini sont accessible via les propriétés du partage de déploiement onglet Rules
->![Untitled](Untitled%2016.png)
+>![automat_deploiemt_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/automat_deploiemt_1.png)
 ### Bootstrap.ini
 - Agit sur le boot lors du déploiement (Win PE)
 - Ce fichier contient les informations nécessaires à l’environnement Windows PE
@@ -317,7 +317,7 @@
 - Click droit sur l’UO task sequence du partage de déploiement
     - puis new Task Sequence
             
-        ![Untitled](Untitled%2017.png)
+        ![task-sequence_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/task-sequence_1.png)
             
     - un assistant s’ouvre la paramétrer.
     - Elle peut être modifier après création
@@ -325,7 +325,7 @@
 - Click droit sur l’UO application du partage de déploiement
     - puis new application
             
-        ![Untitled](Untitled%2018.png)
+        ![app_déploiement_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/app_déploiement_2.png)
             
     - **Etape 1 :** Application Type
         - Indiquer si l’on fournit l’installeur à l’assistant qui se charge de l’importer dans la structure du partage de déploiement
@@ -334,26 +334,26 @@
         - Ou
         - S’il s’agit d’un groupe d’applications
                 
-            ![Untitled](Untitled%2019.png)
+            ![app_déploiement_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/app_déploiement_3.png)
                 
     - **Etape 2 :** installateur
         - Les caractéristiques de l’application
                 
-            ![Untitled](Untitled%2020.png)
+            ![app_déploiement_4](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/app_déploiement_4.png)
                 
         - Le chemin de répertoire dans lequel se trouve l’installeur (créer un répertoire dédié)
         - Le nom du dossier qui sera créé dans l’arborescence du partage de déploiement et contiendra l’installeur
         - La commande permettant l’installation silencieuse et non interactive de l’application
             - exemple
                     
-                ![Untitled](Untitled%2021.png)
+                ![app_déploiement_5](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/app_déploiement_5.png)
                     
     - **Etape 3:**  associer l’application à un task sequence
         - Une ou plusieurs applications peuvent être associées à une séquence de tâches pour être installées après le déploiement du système
         - La capture ci-contre présente le cheminement permettant d’ajouter une application à installer à une séquence de tâches.
         - Enfin, cocher la case Install a single application et la cibler
                 
-            ![Untitled](Untitled%2022.png)
+            ![app_déploiement_6](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/app_déploiement_6.png)
 ---
 ## Sécurité du déploiement
 - L’accès aux ressources du partage de déploiement peut être restreint
@@ -362,4 +362,4 @@
         - Sur le partage ou
         - Via les autorisations NTFS
             
-            ![Untitled](Untitled%2023.png)
+            ![déploiement_secure_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/déploiement_secure_1.png)
