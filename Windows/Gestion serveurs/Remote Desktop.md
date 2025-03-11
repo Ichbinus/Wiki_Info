@@ -81,11 +81,11 @@
 
 - Dans la collection souhaité
     - cliquer sur ***tache*** de remoteapp, puis publier des programmes  
-        ![pub_app_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/pub_app_1.png)  
+        ![pub_app_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images/pub_app_1.png)  
     - suivre l’assistant pour choisir l’app à publier.
         - cocher les app à publier, puis suivants, suivants,…
         
-        ![pub_app_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/pub_app_2.png)
+        ![pub_app_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images/pub_app_2.png)
         
         > N.B: on peux ajouter un programme non listé en cliquant sur “ajouter”
 
@@ -95,7 +95,7 @@
 - Depuis les propriétés de la collection pour agir sur plusieurs programmes en même temps.
 - Depuis les propriétés de publication du programme pour agir programme par programme
     
-    ![config_app](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/config_app.png)
+    ![config_app](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images/config_app.png)
     
 ---
 # Accès aux application à distance
@@ -106,7 +106,7 @@
     - https://nom_du_serveur/RDWeb
     - Une fois authentifié, l’utilisateur peut ensuite lancer l’application souhaitée
     
-    ![client_web](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/client_web.png)
+    ![client_web](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images/client_web.png)
     
 
 ## Outils RemoteApp
@@ -117,6 +117,6 @@
     - Saisir l’url de connexion dans l’outil
         - https://nom_FQDN_du_serveur/RDWeb/Feed/webfeed.aspx
         
-        ![outils_remoteApp](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/outils_remoteApp.png)
+        ![outils_remoteApp](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images/outils_remoteApp.png)
         
     - Les raccourcis RemoteApp apparaissent dans un répertoire Work Resources dans le menu Démarrer
