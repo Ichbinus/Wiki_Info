@@ -59,7 +59,7 @@
 - [ ] Ajouter le serveur au réseau cible
 - [ ] L’intégrer au domaine
 
-
+---
 # Mise à disposition application à distance
 
 ## Création de collection
@@ -76,20 +76,17 @@
     - Les disques de profil utilisateur ⇒ pour les utilisateur nomade (pas fixés à une machine)
 
 ## Publication d’application
-
-<aside>
 ⚠️ Les programmes à publier doivent être installer sur le serveur procédant à la publication
 
-</aside>
 
 - Dans la collection souhaité
     - cliquer sur ***tache*** de remoteapp, puis publier des programmes  
-    ![ ](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/pub_app_1.png)
+        ![publication_app_1](https://nextcloud.maxflix.xyz/index.php/s/3QR4yxoweNtQQC7)
         
     - suivre l’assistant pour choisir l’app à publier.
         - cocher les app à publier, puis suivants, suivants,…
         
-        ![pub_app_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/pub_app_2.png)
+        ![publication_app_2](https://nextcloud.maxflix.xyz/index.php/s/bxXwQ637DGoJqBf)
         
         > N.B: on peux ajouter un programme non listé en cliquant sur “ajouter”
 
@@ -99,28 +96,21 @@
 - Depuis les propriétés de la collection pour agir sur plusieurs programmes en même temps.
 - Depuis les propriétés de publication du programme pour agir programme par programme
     
-    ![Untitled](Untitled%202.png)
+    ![ ](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/config_app.png)
     
-
+---
 # Accès aux application à distance
-
 ## Client web
-
-<aside>
 ⚠️ Le service Accès Bureau à distance par le web (RDS-Web-Access) doit être installé, il s’appuie sur IIS pour son fonctionnement
-
-</aside>
 
 - Depuis un navigateur via le portail Accès Bureau à distance par le Web (RD Web Access)
     - https://nom_du_serveur/RDWeb
     - Une fois authentifié, l’utilisateur peut ensuite lancer l’application souhaitée
     
-    ![Untitled](Untitled%203.png)
+    ![ ](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/client_web.png)
     
 
 ## outils RemoteApp
-
-<aside>
 ⚠️ Attention pour ce que cela soit fonctionnel, le certificat serveur doit avoir été déployé sur le client
 
 ⇒ création d’un PKI
@@ -129,12 +119,10 @@
 
 ⇒ partage de clé public
 
-</aside>
-
 - Accéder aux programmes RemoteApp et aux services Bureau à distance
     - Saisir l’url de connection dans l’outils
         - https://nom_FQDN_du_serveur/RDWeb/Feed/webfeed.aspx
         
-        ![Untitled](Untitled%204.png)
+        ![ ](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/outils_remoteApp.png)
         
     - Les raccourcis RemoteApp apparaissent dans un répertoire Work Resources dans le menu Démarrer
