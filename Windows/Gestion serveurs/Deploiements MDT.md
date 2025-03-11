@@ -199,10 +199,12 @@
 ---
 ## Configuration initiale MDT
 - Ouvrir la console de gestion Deployment Workbench
-![Config_initiale_MDT_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_MDT_1.png)
+
+    ![Config_initiale_MDT_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/Config_initiale_MDT_1.png)
     
    - faire un clic droit sur Deployment Share puis New Deployment Share
-   ![config_initial_MDT_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/config_initial_MDT_2.png)
+        
+        ![config_initial_MDT_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/config_initial_MDT_2.png)
         
 - Renseigner
     - Le chemin du dossier de déploiement
@@ -216,6 +218,7 @@
 ---
 ## Paramètrage du Partage de déploiement
 >⚠️ Une mise à jour du partage déploiement est nécessaire après toute modification
+>
 >![partage_deploiement_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Deploiement_images/partage_deploiement_1.png)
 - Les paramétrages sont disponibles dans les propriétés du partage de déploiement
     - Onglet General
