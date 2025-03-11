@@ -85,7 +85,7 @@
 - Dans la collection souhaité
     - clicker sur “tache “ de remoteapp, puis publier des programmes
         
-        ![pub_app_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/pub_app_1.png)
+        <img src=https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/gestion_wind_serv_rdp/Windows/Gestion%20serveurs/images/pub_app_1.png)/>
         
     - suivre l’assistant pour choisir l’app à publier.
         - cocher les app à publier, puis suivants, suivants,…
