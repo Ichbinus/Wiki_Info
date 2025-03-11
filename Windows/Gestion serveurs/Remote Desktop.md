@@ -90,10 +90,10 @@
     - suivre l’assistant pour choisir l’app à publier.
         - cocher les app à publier, puis suivants, suivants,…
         
-        ![Untitled](Untitled%201.png)
+        [pub_app_2](Windows\Gestion serveurs\images\pub_app_2.png)
         
         > N.B: on peux ajouter un programme non listé en cliquant sur “ajouter”
-        > 
+
 
 ## Configuration des applications
 
