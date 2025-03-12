@@ -102,7 +102,7 @@ access-list access-list-number {deny | permit | remark text} source [source-wild
     permit          cible des paquets à autoriser
     remark          ajoute une description de l'ACL
     ```
-# Application d'une ACL IPv4
+### Application d'une ACL IPv4 standard
 - Dans le mode de configuration d'une interface:
     ```ios
     ip access-group {access-list-number | access-list-name} {in | out}
@@ -112,4 +112,143 @@ access-list access-list-number {deny | permit | remark text} source [source-wild
         interface Serial 0/1/0
         ip access-group PERMIT-ACCESS out
         ```    
-> pour désactiver l'ACL de l'interface "no ip access-group"
+> => pour désactiver l'ACL de l'interface "no ip access-group"
+### Modification d'un ACL
+#### via un éditeur de texte
+- Copiez l'ACL à partir de la configuration en cours d'exécution et collez-la dans l'éditeur de texte.
+- Effectuez les modifications nécessaires.
+- Supprimez l'ACL précédemment configurée sur le routeur sinon, les nouvelles règles vont se cumulées aux anciennes
+- Copiez et collez la liste ACL modifiée sur le routeur.
+#### via les numéros de séquences
+- dans le menu de configuration de l'ACL
+    - supprimé le n° de séquence à corriger
+    - ajouter la ligne corrigée
+        ```ios
+        conf t
+        ip access-list standard "N° ou nom ACL à corriger"
+        no "n° de séquence à corriger"
+        "ACE à ajouter"
+        end
+        ```
+    - exemple:
+        ```ios
+        conf t
+        ip access-list standard 1
+        no 10
+        10 deny host 192.168.10.10
+        end
+        ```
+### Sécurisation des accès vty avec des ACL
+```ios
+conf t
+line vty "n° de ligne"
+login local
+transport input "ssh|telnet"
+access-class {access-list-number | access-list-name} { in | out }
+end
+```
+- exemple:
+    ```ios
+    conf t
+    line vty 0 4
+    transport input ssh
+    access-class ADMIN-HOST in
+    end
+    ```  
+--- 
+## ACL étendues
+### Numérotées
+```ios
+access-list access-list-number {deny | permit | remark text} protocol source source-wildcard [operator {port}] destination destination-wildcard [operator {port}] [established] [log]
+```
+|Paramètre|Descritption|
+|--|--|
+|access-list-number|numérotation de l'ACL (100 à 199 ou 2000 à 2699)|
+|deny / permit|droits d'accès géré|
+|remark|Permet d'ajouter du texte descriptif (facultatif)|
+|protocol|nom ou numéro de protocol internet / mot-clé compatible { ip / tcp / udp / icmp }|
+|source|adresse hôte ou réseau source à gérer / mot-clé "any" cible tous les réseau / mot-clé "host" cible un hôte spécifique|
+|source-wildcard|masque de la source|
+|destination|adresse hôte ou réseau de destination à gérer / mot-clé "any" cible tous les réseau / mot-clé "host" cible un hôte spécifique|
+|destination-wildcard|masque de la destination|
+|operator|compare les ports source et destination {lt / gt / neq / range}|
+|port|n° ou nom d'un port tcp ou udp (facultatif)|
+|established|permet au trafic intérieur de quitter le réseau privé et permet au trafic de réponse de retourner dans le réseau privé (facultatif)|
+|log|permet de logguer a chaque fois qu'une ACE est matchée avec un paquet|
+
+<details>
+<summary>Listing Protocoles</summary>
+    
+- <0-255>: n'importe quel n° de protocol IP
+- ahp: Authentication Header Protocol
+- dvmrp: dvmrp
+- eigrp: Cisco's EIGRP routing protocol
+- esp: Encapsulation Security Payload
+- gre: Cisco's GRE tunneling
+- icmp: Internet Control Message Protocol
+- igmp: Internet Gateway Message Protocol
+- ip: tout les protocols IP
+- ipinp: IP in IP tunneling
+- nos: KA9Q NOS compatible IP over IP tunneling
+- object-group: Service object group
+- ospf: OSPF routing protocol
+- pcp: Payload Compression Protocol
+- pim: Protocol Independent Multicast
+- tcp: Transmission Control Protocol
+- udp: User Datagram Protocol
+</details>
+<details>
+<summary>Listing Ports</summary>
+    
+- La sélection d'un protocole influence les options port
+    - le protocole tcp fournirait des options de ports liés à TCP
+    - le protocole udp fournirait des options de ports spécifiques à UDP
+    - le protocole icmp fournirait des options de ports liés à ICMP
+</details>
+
+### Nommées
+- accéder au mode de configuration de l'ACL:
+    ```ios
+    ip access-list extended "access-list-name"
+    ```
+    - exemple:
+        ```ios
+        ip access-list extended PERMIT-ACCESS
+        ```
+### Application d'une ACL IPv4 étendue
+- Dans le mode de configuration d'une interface:
+    ```ios
+    ip access-group {access-list-number | access-list-name} {in | out}
+    end
+    ```
+    - exemple:
+        ```ios
+        interface g0/0/0
+        ip access-group PERMIT-PC1 in
+        end
+        ```    
+> => pour désactiver l'ACL de l'interface "no ip access-group"
+#### via un éditeur de texte
+- Copiez l'ACL à partir de la configuration en cours d'exécution et collez-la dans l'éditeur de texte.
+- Effectuez les modifications nécessaires.
+- Supprimez l'ACL précédemment configurée sur le routeur sinon, les nouvelles règles vont se cumulées aux anciennes
+- Copiez et collez la liste ACL modifiée sur le routeur.
+#### via les numéros de séquences
+- dans le menu de configuration de l'ACL
+    - supprimé le n° de séquence à corriger
+    - ajouter la ligne corrigée
+        ```ios
+        conf t
+        ip access-list extended "N° ou nom ACL à corriger"
+        no "n° de séquence à corriger"
+        "ACE à ajouter"
+        end
+        ```
+    - exemple:
+        ```ios
+        conf t
+        ip access-list extended 1
+        no 10
+        10 deny host 192.168.10.10
+        end
+        ```
