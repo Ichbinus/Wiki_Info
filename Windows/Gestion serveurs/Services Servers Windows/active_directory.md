@@ -95,15 +95,15 @@
             
 ### Création des Utilisateurs (**A**GDLP)
 #### Via interface graphique
-    - Création de modèle d’utilisateur en fonction des spécificité de service, gestion de mot de passe, appartenance de groupes, horaires de compte,…)
+- Création de modèle d’utilisateur en fonction des spécificité de service, gestion de mot de passe, appartenance de groupes, horaires de compte,…)
             
-        ![AD_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/active_directory_image/AD_2.png)
+    ![AD_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/active_directory_image/AD_2.png)
             
-        ![AD_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/active_directory_image/AD_3.png)
+    ![AD_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/active_directory_image/AD_3.png)
             
-        ![AD_4](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/active_directory_image/AD_4.png)
+    ![AD_4](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/active_directory_image/AD_4.png)
             
-    - les nouveaux compte seront créé en copiant les modèles correspondants et bénéficierons des préréglage du modèle.
+- les nouveaux compte seront créé en copiant les modèles correspondants et bénéficierons des préréglage du modèle.
 ### Création des Groupes (globaux et Domaine Locaux)  (A**GDL**P)       
 #### Via interface graphique
 > 💡**Groupes Globaux**: servent à ranger les users en groupes de même caractéristiques (toutes les secrétaires du service info, tous les opérateurs du service production,…)
