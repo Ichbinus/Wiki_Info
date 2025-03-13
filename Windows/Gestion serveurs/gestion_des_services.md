@@ -39,4 +39,4 @@
     ```
 # Tutos d'installation des serfices Windows
 - **Service de déploiement MDT/WDS** ➡️ [`Service de déploiement MDT/WDS`](Windows/Gestion%20serveurs/Services%20Servers%20Windows/Deploiements%20MDT.md)
-- **Service de Bureau à distance** ➡️ [`Remote Desktop`](Windows/Gestion%20serveurs/Services%20Servers%20Windows/Remote%20Desktop.md)
+- **Service de Bureau à distance** ➡️ [`Remote Desktop`](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/Remote%20Desktop.md#)
