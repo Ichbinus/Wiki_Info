@@ -16,19 +16,19 @@
 ## Interface graphique
 - depuis le gestionnaire de serveur, cliquez sur ajouter rôles et fonctionnalités
             
-    ![ws_service_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/images/ws_service_1.png)
+    ![ws_service_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/ws_service_1.png)
             
 - sélectionner le rôle de serveur a ajouter (DHCP, DNS, active directory,…)
             
-    ![ws_service_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/images/ws_service_2.png)
+    ![ws_service_2](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/ws_service_2.png)
             
 - Valider les fonctionnalités nécessaires
             
-    ![ws_service_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/images/ws_service_3.png)
+    ![ws_service_3](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/ws_service_3.png)
             
 - personnaliser les fonctionnalités si besoin
             
-    ![ws_service_4](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/images/ws_service_4.png)
+    ![ws_service_4](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/images_services_WS/ws_service_4.png)
             
 - confirmer les modules allant être installés et lancer l’installation
         
