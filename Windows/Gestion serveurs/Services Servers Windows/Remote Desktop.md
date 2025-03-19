@@ -11,6 +11,14 @@
 </div>
 
 ---
+# Table des matières
+- [Prérequis](#prérequis)
+- [Principe de fonctionnement](#principe-de-fonctionnement)
+- [Avantage / Désavantage](#avantage--désavantage)
+- [Installation du rôle RDS](#installation-du-rôle-rds)
+- [Mise à disposition application à distance](#mise-à-disposition-application-à-distance)
+- [Accès aux application à distance](#accès-aux-application-à-distance)
+---
 # Prérequis
 
 - Active Directory pour la gestion centralisée des utilisateurs et ressources

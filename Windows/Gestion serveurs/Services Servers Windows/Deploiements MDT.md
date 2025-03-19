@@ -11,6 +11,12 @@
 </div>
 
 ---
+# Table des matières
+- [Solutions possibles](#solutions-possibles)
+- [Prérequis](#prérequis)
+- [WDS](#wds)
+- [MDT](#mdt)
+---
 # Solutions possibles
    <details>
     <summary>WDS : Windows Deployment Services</summary>
