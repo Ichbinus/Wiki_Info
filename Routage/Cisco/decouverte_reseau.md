@@ -11,8 +11,8 @@
 
 ---
 # Table des matières
-- [Protocole propriétaire: CDP](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/main/Routage/Cisco/decouverte_reseau.md#protocole-propri%C3%A9taire-cdp)
-- [Protocole générique: LLDP](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/src/branch/main/Routage/Cisco/decouverte_reseau.md#protocole-g%C3%A9n%C3%A9rique-lldp)
+- [Protocole propriétaire: CDP](#decouverte_reseau.md#protocole-propri%C3%A9taire-cdp)
+- [Protocole générique: LLDP](#decouverte_reseau.md#protocole-g%C3%A9n%C3%A9rique-lldp)
 
 # Protocole propriétaire: CDP
 ## Activation et désactivation de CDP
