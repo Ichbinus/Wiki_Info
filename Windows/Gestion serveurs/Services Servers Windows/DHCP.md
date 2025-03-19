@@ -19,7 +19,7 @@
 # Prérequis
 - le serveur doit appartenir au réseau ou domaine qui doit être géré
 ---
-# Installation  du rôle DHCP
+# Installation du rôle DHCP
 ## Via interface graphique
 1. **Ouvrir le Gestionnaire de serveur**.
 2. Cliquer sur **Gérer**, puis **Ajouter des rôles et fonctionnalités**.
