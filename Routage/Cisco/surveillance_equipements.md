@@ -27,10 +27,10 @@ Cisco prend en charge plusieurs versions de SNMP :
     ```
 ## Activer SNMPv3
 - SNMPv3 nécessite une configuration plus avancée avec authentification et chiffrement :
-    ```bash
-    Router(config)# snmp-server group SECUREGROUP v3 priv
-    Router(config)# snmp-server user ADMIN SECUREGROUP v3 auth sha secretpass priv aes 128 secretkey
-    ```
+```bash
+Router(config)# snmp-server group SECUREGROUP v3 priv
+Router(config)# snmp-server user ADMIN SECUREGROUP v3 auth sha secretpass priv aes 128 secretkey
+```
 - Explication :
     - `SECUREGROUP` : Nom du groupe SNMPv3.
     - `ADMIN` : Nom de l'utilisateur SNMP.
@@ -38,17 +38,17 @@ Cisco prend en charge plusieurs versions de SNMP :
     - `priv aes 128 secretkey` : Chiffrement des données avec AES-128.
 # Vérification de la configuration SNMP
 ## Vérifier les communautés SNMP
-    ```bash
-    Router# show snmp community
-    ```
+```bash
+Router# show snmp community
+```
 ## Vérifier les utilisateurs SNMPv3
-    ```bash
-    Router# show snmp user
-    ```
+```bash
+Router# show snmp user
+```
 ## Vérifier l'état général de SNMP
-    ```bash
-    Router# show snmp
-    ```
+```bash
+Router# show snmp
+```
 # Sécurisation de SNMP
 - **Utiliser SNMPv3** au lieu de SNMPv1 ou SNMPv2c.
 - **Limiter les accès SNMP à certaines adresses IP** :
