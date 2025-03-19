@@ -11,7 +11,8 @@
 
 ---
 # Table des matières
-- [Protocole propriétaire: CDP](#Protocole-propriétaire:-CDP)
+- [Protocole propriétaire: CDP](#protocole-propriétaire:-cdp)
+- [Protocole générique: LLDP](#protocole-générique:-lldp)
 
 # Protocole propriétaire: CDP
 ## Activation et désactivation de CDP
