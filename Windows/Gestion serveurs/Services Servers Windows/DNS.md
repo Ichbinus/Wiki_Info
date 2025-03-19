@@ -12,21 +12,31 @@
 
 ---
 # Table des matières
-- [Installation pilote](#installation-pilote)
-- [Création de ports](#création-de-ports)
-- [Création d’imprimantes](#création-dimprimantes)
-- [Création de pool d’impression](#création-de-pool-dimpression)
+- [Prérequis](#prérequis)
+- [Installation du rôle DNS](#installation-du-rôle-dns)
+- [Gestion du rôle DNS](#gestion-du-rôle-dns)
 ---
 # Prérequis
 - le serveur doit appartenir au réseau ou domaine qui doit être géré
 ---
 # Installation du rôle DNS
 ## Via Interface graphique
+1. **Ouvrir le Gestionnaire de serveur**.
+2. Cliquer sur **Gérer**, puis **Ajouter des rôles et fonctionnalités**.
+3. Sélectionner **Installation basée sur un rôle ou une fonctionnalité** et cliquer sur **Suivant**.
+4. Choisir le serveur sur lequel installer le rôle DNS et cliquer sur **Suivant**.
+5. Cocher **Serveur DNS**, puis cliquer sur **Suivant** et **Ajouter les fonctionnalités requises**.
+6. Valider les options et cliquer sur **Installer**.
+7. Une fois l’installation terminée, cliquer sur **Fermer** et configurer le DNS.
 ## Via Powershell
+Ouvrir une fenêtre PowerShell en tant qu'administrateur et exécuter la commande suivante pour installer le rôle DNS :
 ```powershell
-Install-WindowsFeature -Name DNS -IncludeManagementTools 
+Install-WindowsFeature -Name DNS -IncludeManagementTools
 ```
----
+Démarrer le service DNS si nécessaire :
+```powershell
+Start-Service DNS
+```
 # Gestion du rôle DNS
 ## Via Interface graphique
 - Redirection de DNS
