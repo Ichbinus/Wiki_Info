@@ -38,9 +38,9 @@ Cisco prend en charge plusieurs versions de SNMP :
     - `priv aes 128 secretkey` : Chiffrement des données avec AES-128.
 # Vérification de la configuration SNMP
 ## Vérifier les communautés SNMP
-    ```bash
-    Router# show snmp community
-    ```
+     ```bash
+     Router# show snmp community
+     ```
 ## Vérifier les utilisateurs SNMPv3
     ```bash
     Router# show snmp user
