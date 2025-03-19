@@ -17,7 +17,7 @@
     - [Depuis un serveur NTP](#depuis-un-serveur-ntp)
     - [Configuration avancée](#configuration-avanc%C3%A9e)
     - [Sécurité et bonnes pratiques](#s%C3%A9curit%C3%A9-et-bonnes-pratiques)
-
+---
 # Vérification du réglage Horloge
 ```ios
 Router# show clock detail

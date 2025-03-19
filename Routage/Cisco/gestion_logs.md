@@ -10,6 +10,11 @@
 </div>
 
 ---
+# Table des matières
+- [Configuration de Syslog](#configuration-de-syslog)
+- [Sécurisation de Syslog](#sécurisation-de-syslog)
+
+---
 # Configuration de Syslog
 ## Prérequis
 - Un serveur de gestion des logs (syslog) doit être déployé sur le réseau

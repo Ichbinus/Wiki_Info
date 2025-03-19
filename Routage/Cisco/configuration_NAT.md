@@ -9,6 +9,14 @@
   <h1 align="center">Configuration traduction NAT sur les routeurs CISCO</h1>
 </div>
 
+---
+# Table des matières
+- [Avantage / Inconvénient de NAT](#versions-de-snmp)
+- [NAT Statique](#nat-statique)
+- [NAT Dynamique](#nat-dynamique)
+- [PAT (Traduction d’adresses de port)](#pat-traduction-dadresses-de-port)
+
+---
 # Avantage / Inconvénient de NAT
   <details>
   <summary>Avantages</summary>

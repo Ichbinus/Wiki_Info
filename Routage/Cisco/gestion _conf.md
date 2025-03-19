@@ -10,6 +10,13 @@
 </div>
 
 ---
+# Table des matières
+- [Sauvegarde de la configuration](#sauvegarde-de-la-configuration)
+- [Restauration de la configuration](#restauration-de-la-configuration)
+- [Comparaison et validation de configuration](#comparaison-et-validation-de-configuration)
+- [Bonnes pratiques](#bonnes-pratiques)
+
+---
 # Introduction
 La gestion des configurations sur les équipements Cisco est essentielle pour assurer la continuité du service et faciliter la récupération en cas de problème. Il est possible de sauvegarder et restaurer les configurations à l’aide de plusieurs méthodes : **TFTP, FTP, SCP, USB, et stockage local**.
 # Sauvegarde de la configuration

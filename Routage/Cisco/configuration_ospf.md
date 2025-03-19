@@ -10,7 +10,19 @@
 </div>
 
 ---
-
+# Table des matières
+- [Vérification fonctionnement OSPF](#v%C3%A9rification-fonctionnement-OSPF)
+- [Activation d'OSPF sur le Routeur](#activation-ospf-sur-le-routeur)
+- [Configurer un ID de Routeur](#configurer-un-id-de-routeur)
+- [Configuration OSPF](#configuration-ospf)
+- [Configurer des interfaces passives](#configurer-des-interfaces-passives)
+- [Configuration du type de réseau](#configuration-du-type-de-r%C3%A9seau)
+- [Configuration de la priorité OSPF](#configuration-de-la-priorit%C3%A9-ospf)
+- [Configuration des coûts de liaisons](#configuration-des-coûts-de-liaisons)
+- [Ajuster la largeur de bande passante de référence](#ajuster-la-largeur-de-bande-passante-de-r%C3%A9f%C3%A9rence)
+- [Modifier les intervalles OSPFv2](#modifier-les-intervalles-ospfv2)
+- [Propager une route statique via OSPFv2](#propager-une-route-statique-via-ospfv2)
+---
 # Vérification fonctionnement OSPF
 ```ios
 show ip interface brief
@@ -31,7 +43,7 @@ show ip ospf
 show ip ospf interface
 ```
 ---
-#  Activation d'OSPF sur le Routeur
+#  Activation OSPF sur le Routeur
 ```ios
 conf t
 router ospf "id proccessus"

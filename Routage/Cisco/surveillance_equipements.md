@@ -10,6 +10,12 @@
 </div>
 
 ---
+# Table des matières
+- [Versions de SNMP](#versions-de-snmp)
+- [Configuration de SNMP](#configuration-de-snmp)
+- [Vérification de la configuration SNMP](#vérification-de-la-configuration-snmp)
+- [Sécurisation de SNMP](#sécurisation-de-snmp)
+---
 # Versions de SNMP
 Cisco prend en charge plusieurs versions de SNMP :
 - **SNMPv1** : Version la plus ancienne, peu sécurisée.
