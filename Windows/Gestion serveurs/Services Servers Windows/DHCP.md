@@ -27,6 +27,7 @@
 ## Via Interface Graphique
 - Création d’étendue d’adresse IP
     - dans la console DHCP, cliquer droit sur le serveur et choisir nouvelle étendue
+    
         ![dhcp_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/dhcp_image/dhcp_1.png)
                 
     - saisir le nom de l’étendue (utiliser une charte pour assurer la comprehension par tous le monde)
