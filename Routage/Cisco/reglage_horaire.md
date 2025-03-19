@@ -10,6 +10,14 @@
 </div>
 
 ---
+# Table des matières
+- [Vérification du réglage Horloge](#v%C3%A9rification-du-r%C3%A9glage-horloge)
+- [Réglage Horloge](#r%C3%A9glage-horloge)
+    - [En locale sur la machine](#en-locale-sur-la-machine)
+    - [Depuis un serveur NTP](#depuis-un-serveur-ntp)
+    - [Configuration avancée](#configuration-avanc%C3%A9e)
+    - [Sécurité et bonnes pratiques](#s%C3%A9curit%C3%A9-et-bonnes-pratiques)
+
 # Vérification du réglage Horloge
 ```ios
 Router# show clock detail
