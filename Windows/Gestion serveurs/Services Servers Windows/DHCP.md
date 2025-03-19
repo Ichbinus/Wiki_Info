@@ -12,22 +12,38 @@
 
 ---
 # Table des matières
-- [Installation pilote](#installation-pilote)
-- [Création de ports](#création-de-ports)
-- [Création d’imprimantes](#création-dimprimantes)
-- [Création de pool d’impression](#création-de-pool-dimpression)
+- [Prérequis](#prérequis)
+- [Installation  du rôle DHCP](#installation--du-rôle-dhcp)
+- [Gestion DHCP](#gestion-dhcp)
 ---
 # Prérequis
 - le serveur doit appartenir au réseau ou domaine qui doit être géré
-
+---
 # Installation  du rôle DHCP
 ## Via interface graphique
+1. **Ouvrir le Gestionnaire de serveur**.
+2. Cliquer sur **Gérer**, puis **Ajouter des rôles et fonctionnalités**.
+3. Sélectionner **Installation basée sur un rôle ou une fonctionnalité** et cliquer sur **Suivant**.
+4. Choisir le serveur sur lequel installer le rôle DHCP et cliquer sur **Suivant**.
+5. Cocher **Serveur DHCP**, puis cliquer sur **Suivant** et **Ajouter les fonctionnalités requises**.
+6. Valider les options et cliquer sur **Installer**.
+7. Une fois l’installation terminée, cliquer sur **Fermer** et configurer le DHCP.
 ## Via Powershell
+- Ouvrir une fenêtre PowerShell en tant qu'administrateur et exécuter la commande suivante pour installer le rôle DHCP :
+    ```powershell
+    Install-WindowsFeature -Name DHCP -IncludeManagementTools
+    ```
+- Après l’installation, autoriser le serveur DHCP dans Active Directory (si nécessaire) :
+    ```powershell
+    netsh dhcp add securitygroups
+    Restart-Service dhcpserver
+    ```
+---
 # Gestion DHCP
 ## Via Interface Graphique
 - Création d’étendue d’adresse IP
     - dans la console DHCP, cliquer droit sur le serveur et choisir nouvelle étendue
-    
+
         ![dhcp_1](https://gitea.maxflix.xyz/Ichbine/Wiki_Info/raw/branch/main/Windows/Gestion%20serveurs/Services%20Servers%20Windows/dhcp_image/dhcp_1.png)
                 
     - saisir le nom de l’étendue (utiliser une charte pour assurer la comprehension par tous le monde)
