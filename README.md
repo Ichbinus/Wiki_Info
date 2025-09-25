@@ -6,11 +6,10 @@ Bienvenue dans ce dépôt qui centralise des astuces et bonnes pratiques pour la
 
 Les instructions et tutoriels sont classés par catégorie :
 
-- **🖥️ Gestion des postes Windows** ➡️ [`windows/`](windows/)
-- **🐧 Gestion des postes Linux** ➡️ [`linux/`](linux/)
-- **🖧 Déploiement de serveurs Windows** ➡️ [`serveurs/windows/`](serveurs/windows/)
-- **📡 Déploiement de serveurs Linux** ➡️ [`serveurs/linux/`](serveurs/linux/)
-- **🔧 Outils et scripts utiles** ➡️ [`outils/`](outils/)
+- **🖥️ Gestion des postes Windows** ➡️ [`windows/`](./windows/)
+- **🐧 Gestion des postes Linux** ➡️ [`linux/`](./linux/)
+- **🖧 Déploiement de serveurs Windows** ➡️ [`serveurs/windows/`](./Windows/Installation%20Poste%20Windows.md)
+- **📡 Déploiement de serveurs Linux** ➡️ [`serveurs/linux/`](./Linux/Installation_Linux.md)
 
 ## 🚀 Comment utiliser ce dépôt ?
 
